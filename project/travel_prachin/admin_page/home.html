@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>หน้าหลัก</title>
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="../../../dist/css/fontsgoogle.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../../plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../../dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="../../../dist/sweetalert/sweetalert2.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="../../../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="../../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="../../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="../../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <link rel="stylesheet" href="../../../plugins/ekko-lightbox/ekko-lightbox.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="../../../plugins/select2/css/select2.min.css">
+    <!-- summernote -->
+    <link rel="stylesheet" href="../../../plugins/summernote/summernote-bs4.min.css">
+</head>
+<style>
+    /* เพิ่ม CSS ในส่วนนี้เพื่อกำหนดฟอนต์ให้กับทุกส่วนของหน้าเว็บไซต์ */
+    * {
+        font-family: 'Kanit', sans-serif;
+    }
+
+    th {
+        background-color: #F5F6FA;
+        text-align: center;
+        border-bottom: none;
+    }
+
+    tbody {
+        border-bottom: 10px solid #ccc;
+        text-align: center;
+
+    }
+
+    .table thead th {
+        border-bottom: none;
+    }
+
+    .select2-container .select2-selection--single {
+        box-sizing: border-box;
+        cursor: pointer;
+        display: block;
+        height: 40px;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+</style>
+
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+        <!-- Preloader -->
+        <div class="preloader flex-column justify-content-center align-items-center">
+            <h2 class="display-4">is loading <i class="fa fa-sync fa-spin"></i></h2>
+        </div>
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <!-- info user -->
+                    <div class="user-block">
+                        <a class="nav-link " href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <img class="img-circle" src="../../../dist/img/avatar6.png" alt="User Image">
+                            <span class="username">Jirayut Bandit</span>
+                            <span class="description">แอดมิน</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="userDropdown">
+                            <!-- Dropdown items go here -->
+                            <a class="dropdown-item" href="./profile.html"> <i class="fas fa-id-card"></i>
+                                ข้อมูลส่วนตัว
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="nav-link" href="../login.html" role="button">
+                                <i class="fas fa-sign-out-alt"></i> ออกจากระบบ
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="./home.html" class="brand-link">
+                <span class="brand-text ml-1 ">ระบบการจัดการ</span>
+            </a>
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+                        <li class="nav-header">Home</li>
+                        <li class="nav-item">
+                            <a href="./home.html" class="nav-link">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>
+                                    หน้าหลัก
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../../../index.html" class="nav-link">
+                                <i class="nav-icon fas fa-robot"></i>
+                                <p>
+                                    Portfolio
+                                </p>
+                            </a>
+                        </li>
+                        <div>
+                            <hr>
+                        </div>
+                        <li class="nav-header">ระบบการจัดการ สมาชิก</li>
+                        <li class="nav-item">
+                            <a href="./user.html" class="nav-link">
+                                <i class="nav-icon fas fa-user-cog"></i>
+                                <p>
+                                    ข้อมูลสมาชิก
+                                </p>
+                            </a>
+                        </li>
+                        <div>
+                            <hr>
+                        </div>
+                        <li class="nav-header">ระบบการจัดการ บทความ</li>
+                        <li class="nav-item">
+                            <a href="./article_all.html" class="nav-link">
+                                <i class="nav-icon fas fa-newspaper"></i>
+                                <p>
+                                    การจัดการบทความ
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./article_add.html" class="nav-link">
+                                <i class="nav-icon fas fa-plus-square"></i>
+                                <p>
+                                    เพิ่มบทความ
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./category.html" class="nav-link">
+                                <i class="nav-icon fas fa-th-list"></i>
+                                <p>
+                                    การจัดการหมวดหมู่
+                                </p>
+                            </a>
+                        </li>
+                        <div>
+                            <hr>
+                        </div>
+                        <li class="nav-header">ระบบการจัดการ ข่าวสาร</li>
+                        <li class="nav-item">
+                            <a href="./news_all.html" class="nav-link">
+                                <i class="nav-icon fas fa-scroll"></i>
+                                <p>
+                                    การจัดการข่าวสาร
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./news_add.html" class="nav-link">
+                                <i class="nav-icon fas fa-plus-circle"></i>
+                                <p>
+                                    เพิ่มข่าวสาร
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1>หน้าหลัก
+                        </h1>
+                    </div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item active"><a>หน้าหลัก</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-sm-12">
+                        <div class="card card-success">
+                            <div class="card-header">
+                                <h3 class="card-title">ยอดเข้าชมบทความ</h3>
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart">
+                                    <canvas id="barChart"
+                                        style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-sm-12">
+                        <div class="card card-info">
+                            <div class="card-header">
+                                <h3 class="card-title">ยอดเข้าชมตามประเภท</h3>
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart">
+                                    <canvas id="barChart_type"
+                                        style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-sm-12">
+                        <div class="card card-info">
+                            <div class="card-header">
+                                <h3 class="card-title">ยอดเข้าชมข่าวสาร</h3>
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart">
+                                    <canvas id="barChart_news"
+                                        style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+</body>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="../../../plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="../../../plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="../../../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../../dist/js/adminlte.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../../dist/js/demo.js"></script>
+<!-- SweetAlert2 -->
+<script src="../../../dist/sweetalert/sweetalert2.js"></script>
+<!-- DataTables  & Plugins -->
+<script src="../../../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="../../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="../../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="../../../plugins/jszip/jszip.min.js"></script>
+<script src="../../../plugins/pdfmake/pdfmake.min.js"></script>
+<script src="../../../plugins/pdfmake/vfs_fonts.js"></script>
+<script src="../../../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="../../../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="../../../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<script src="../../../plugins/filterizr/jquery.filterizr.min.js"></script>
+<script src="../../../plugins/ekko-lightbox/ekko-lightbox.min.js"></script>
+<!-- Select2 -->
+<script src="../../../plugins/select2/js/select2.full.min.js"></script>
+<!-- Summernote -->
+<script src="../../../plugins/summernote/summernote-bs4.min.js"></script>
+<script src="../../../plugins/chart.js/Chart.min.js"></script>
+
+<script>
+    $(function () {
+        $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+            event.preventDefault();
+            $(this).ekkoLightbox({
+                alwaysShowClose: true
+            });
+        });
+
+        $('.btn[data-filter]').on('click', function () {
+            $('.btn[data-filter]').removeClass('active');
+            $(this).addClass('active');
+        });
+    })
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+    function getRandomNumber() {
+    // Generate a random number based on your requirements
+    return Math.floor(Math.random() * 100); // Adjust the range as needed
+}
+</script>
+<script>
+    $(function () {
+        var areaChartData_article = {
+            labels: ['ยอดเข้าชม'],
+            datasets: []
+        };
+        var data_article = [
+            { 'topic': 'ที่เที่ยวปราจีน 2024 มีดีกว่าทีคิด ทุ่งดอกหงอนนาค สวนศักดิ์สุภา ทุ่งดอกหงอนนาค สวนศักดิ์สุภา', 'view_count':  getRandomNumber() },
+            { 'topic': 'ที่เที่ยวปราจีน', 'view_count':  getRandomNumber() },
+            // Add more articles as needed
+        ];
+        var data_type_travel = [
+            { 'name_travel': 'อาหารและการกิน', 'count_view_type':  getRandomNumber() },
+            { 'name_travel': 'สถานที่ท่องเที่ยว', 'count_view_type':  getRandomNumber() },
+            // Add more articles as needed
+        ];
+        var data_news = [
+            { 'topic_news': 'ข่าวประชาสัมพันธ์ 1', 'view_count':  getRandomNumber() },
+            { 'topic_news': 'ข่าวประชาสัมพันธ์ 2', 'view_count':  getRandomNumber() },
+            // Add more articles as needed
+        ];
+
+        data_article.forEach(element => {
+            var dataset_article = {
+                label: element.topic,
+                backgroundColor: getRandomColor(),
+                borderColor: getRandomColor(),
+                pointRadius: false,
+                pointColor: getRandomColor(),
+                pointStrokeColor: getRandomColor(),
+                pointHighlightFill: getRandomColor(),
+                pointHighlightStroke: getRandomColor(),
+                data: [element.view_count]
+            };
+            areaChartData_article.datasets.push(dataset_article);
+        });
+
+        var areaChartData_type = {
+            labels: ['ยอดเข้าชม'],
+            datasets: []
+        };
+        data_type_travel.forEach(element => {
+            var dataset_type = {
+                label: element.name_travel,
+                backgroundColor: getRandomColor(),
+                borderColor: getRandomColor(),
+                pointRadius: false,
+                pointColor: getRandomColor(),
+                pointStrokeColor: getRandomColor(),
+                pointHighlightFill: getRandomColor(),
+                pointHighlightStroke: getRandomColor(),
+                data: [element.count_view_type]
+            };
+            areaChartData_type.datasets.push(dataset_type);
+        });
+
+        var areaChartData_new = {
+            labels: ['ยอดเข้าชม'],
+            datasets: []
+        };
+        data_news.forEach(element => {
+            var dataset_new = {
+                label: element.topic_news,
+                backgroundColor: getRandomColor(),
+                borderColor: getRandomColor(),
+                pointRadius: false,
+                pointColor: getRandomColor(),
+                pointStrokeColor: getRandomColor(),
+                pointHighlightFill: getRandomColor(),
+                pointHighlightStroke: getRandomColor(),
+                data: [element.view_count]
+            };
+            areaChartData_new.datasets.push(dataset_new);
+        });
+
+        //-------------
+        //- BAR CHART -
+        //-------------
+        var barChartCanvas = $('#barChart').get(0).getContext('2d')
+        var barChartCanvas_type = $('#barChart_type').get(0).getContext('2d')
+        var barChartCanvas_news = $('#barChart_news').get(0).getContext('2d')
+
+        var barChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            datasetFill: false,
+            scales: {
+                yAxes: [{
+                    display: true,
+                    ticks: {
+                        min: 0
+                    }
+                }]
+            }
+        };
+
+        new Chart(barChartCanvas, {
+            type: 'bar',
+            data: areaChartData_article,
+            options: barChartOptions
+        })
+
+        new Chart(barChartCanvas_type, {
+            type: 'bar',
+            data: areaChartData_type,
+            options: barChartOptions
+        })
+
+        new Chart(barChartCanvas_news, {
+            type: 'bar',
+            data: areaChartData_new,
+            options: barChartOptions
+        })
+
+    })
+</script>
+
+</html>

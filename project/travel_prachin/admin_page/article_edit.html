@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>แก้ไขบทความ</title>
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="../../../dist/css/fontsgoogle.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../../plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../../dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="../../../dist/sweetalert/sweetalert2.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="../../../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="../../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="../../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="../../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <link rel="stylesheet" href="../../../plugins/ekko-lightbox/ekko-lightbox.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="../../../plugins/select2/css/select2.min.css">
+    <!-- summernote -->
+    <link rel="stylesheet" href="../../../plugins/summernote/summernote-bs4.min.css">
+</head>
+<style>
+    /* เพิ่ม CSS ในส่วนนี้เพื่อกำหนดฟอนต์ให้กับทุกส่วนของหน้าเว็บไซต์ */
+    * {
+        font-family: 'Kanit', sans-serif;
+    }
+
+    th {
+        background-color: #F5F6FA;
+        text-align: center;
+        border-bottom: none;
+    }
+
+    tbody {
+        border-bottom: 10px solid #ccc;
+        text-align: center;
+
+    }
+
+    .table thead th {
+        border-bottom: none;
+    }
+
+    .select2-container .select2-selection--single {
+        box-sizing: border-box;
+        cursor: pointer;
+        display: block;
+        height: 40px;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+</style>
+
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+        <!-- Preloader -->
+        <div class="preloader flex-column justify-content-center align-items-center">
+            <h2 class="display-4">is loading <i class="fa fa-sync fa-spin"></i></h2>
+        </div>
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <!-- info user -->
+                    <div class="user-block">
+                        <a class="nav-link " href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <img class="img-circle" src="../../../dist/img/avatar6.png" alt="User Image">
+                            <span class="username">Jirayut Bandit</span>
+                            <span class="description">แอดมิน</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="userDropdown">
+                            <!-- Dropdown items go here -->
+                            <a class="dropdown-item" href="./profile.html"> <i class="fas fa-id-card"></i>
+                                ข้อมูลส่วนตัว
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="nav-link" href="../login.html" role="button">
+                                <i class="fas fa-sign-out-alt"></i> ออกจากระบบ
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="./home.html" class="brand-link">
+                <span class="brand-text ml-1 ">ระบบการจัดการ</span>
+            </a>
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+                        <li class="nav-header">Home</li>
+                        <li class="nav-item">
+                            <a href="./home.html" class="nav-link">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>
+                                    หน้าหลัก
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../../../index.html" class="nav-link">
+                                <i class="nav-icon fas fa-robot"></i>
+                                <p>
+                                    Portfolio
+                                </p>
+                            </a>
+                        </li>
+                        <div>
+                            <hr>
+                        </div>
+                        <li class="nav-header">ระบบการจัดการ สมาชิก</li>
+                        <li class="nav-item">
+                            <a href="./user.html" class="nav-link">
+                                <i class="nav-icon fas fa-user-cog"></i>
+                                <p>
+                                    ข้อมูลสมาชิก
+                                </p>
+                            </a>
+                        </li>
+                        <div>
+                            <hr>
+                        </div>
+                        <li class="nav-header">ระบบการจัดการ บทความ</li>
+                        <li class="nav-item">
+                            <a href="./article_all.html" class="nav-link">
+                                <i class="nav-icon fas fa-newspaper"></i>
+                                <p>
+                                    การจัดการบทความ
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./article_add.html" class="nav-link">
+                                <i class="nav-icon fas fa-plus-square"></i>
+                                <p>
+                                    เพิ่มบทความ
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./category.html" class="nav-link">
+                                <i class="nav-icon fas fa-th-list"></i>
+                                <p>
+                                    การจัดการหมวดหมู่
+                                </p>
+                            </a>
+                        </li>
+                        <div>
+                            <hr>
+                        </div>
+                        <li class="nav-header">ระบบการจัดการ ข่าวสาร</li>
+                        <li class="nav-item">
+                            <a href="./news_all.html" class="nav-link">
+                                <i class="nav-icon fas fa-scroll"></i>
+                                <p>
+                                    การจัดการข่าวสาร
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./news_add.html" class="nav-link">
+                                <i class="nav-icon fas fa-plus-circle"></i>
+                                <p>
+                                    เพิ่มข่าวสาร
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1>แก้ไขบทความ
+                        </h1>
+                    </div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item">
+                                <a href="./home.html">หน้าหลัก</a>
+                            </li>
+                            <li class="breadcrumb-item active"><a>แก้ไขบทความ</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card" id="late-price_Table">
+                            <div class="card-header bg-navy">
+                                <h2 class="card-title"></h2>
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <form class="mb-3" id="form_create_article" action="javascript:void(0)" method="post"
+                                    enctype="multipart/form-data">
+                                    <div class="row">
+                                        <div class="col-md-12 text-center">
+                                            <label>ภาพหน้าปกบทความ</label>
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-sm-2 mx-auto text-center border">
+                                                        <a href="../../../dist/img/travel/cover1.jpg"
+                                                            data-toggle="lightbox" id="image-preview-extra-">
+                                                            <img class="img-fluid mb-2"
+                                                                src="../../../dist/img/travel/cover1.jpg"
+                                                                alt="white sample" id="image-preview-" />
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-center mt-2" id="upload">
+                                                <label for="uploadImage"
+                                                    class="btn btn-block-tool btn-success btn-sm mb-2">อัปโหลดรูป</label>
+                                                <input type="file" id="uploadImage" name="uploadImage"
+                                                    style="display: none;" accept="image/*"
+                                                    onchange="previewImage(this);">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>หัวข้อบทความ</label>
+                                                <textarea name="topic" id="topic" cols="5" rows="8" class="form-control"
+                                                    required>ที่เที่ยวปราจีน 2024 มีดีกว่าทีคิด ทุ่งดอกหงอนนาค สวนศักดิ์สุภา ทุ่งดอกหงอนนาค สวนศักดิ์สุภา
+                                                </textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>เวลาเปิด-ปิด</label>
+                                                <textarea name="time_open" id="time_open" cols="5" rows="5"
+                                                    class="form-control">08:00 น. – 17:00 น.</textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>หมวดหมู่</label>
+                                                <select class="form-control select2" style="width: 100%; height: 40px"
+                                                    id="id_type_travel" name="id_type_travel">
+                                                    <option selected="selected" value="">อาหารและการกิน</option>
+                                                    <option value="">ท่องเที่ยว</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>ลิ้งค์ google map</label>
+                                                <input type="text" name="google_link" id="google_link"
+                                                    class="form-control" value="https://maps.app.goo.gl/Xa8xdgvEEuU5LYSJ7">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>สถานที่</label>
+                                                <input type="text" name="location" id="location" class="form-control" value="ทุ่งดอกหงอนนาค สวนศักดิ์สุภา">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>ค่าเข้าสถานที่</label>
+                                                <input type="text" name="location_price" id="location_price"
+                                                    class="form-control" value="30 บาท ต่อคน">
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <label>ชื่อ facebook</label>
+                                                        <input type="text" name="face_book_name" id="face_book_name"
+                                                            class="form-control">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label>ลิ้งค์ facebook</label>
+                                                        <input type="text" name="facebook_link" id="facebook_link"
+                                                            class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label>เนื้อหาในบทความ</label>
+                                            <textarea class="form-control" type="text" placeholder="" name="detail"
+                                                id="summernote1">ทุ่งดอกหงอนนาค สวนศักดิ์สุภา เป็นสวนดอกไม้อย่างดอกหงอนนาคที่กินพื้นที่บริเวณกว้างจนเรียกกันอย่างชินปากว่าทุ่งดอกหงอนนาค ช่วงที่ดอกหงอนนาคบานสวยมาก​ ๆ​ จนเรียกสายถ่ายภาพ​
+                                            </textarea>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer text-center" id="btn_price_late">
+                                        <button type="submit" class="btn btn-success" name="submit" value="Submit"
+                                            id="submit">บันทึก</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="overlay dark">
+                                <i class="fas fa-2x fa-sync-alt fa-spin"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="../../../plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="../../../plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="../../../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../../dist/js/adminlte.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../../dist/js/demo.js"></script>
+<!-- SweetAlert2 -->
+<script src="../../../dist/sweetalert/sweetalert2.js"></script>
+<!-- DataTables  & Plugins -->
+<script src="../../../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="../../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="../../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="../../../plugins/jszip/jszip.min.js"></script>
+<script src="../../../plugins/pdfmake/pdfmake.min.js"></script>
+<script src="../../../plugins/pdfmake/vfs_fonts.js"></script>
+<script src="../../../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="../../../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="../../../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<script src="../../../plugins/filterizr/jquery.filterizr.min.js"></script>
+<script src="../../../plugins/ekko-lightbox/ekko-lightbox.min.js"></script>
+<!-- Select2 -->
+<script src="../../../plugins/select2/js/select2.full.min.js"></script>
+<!-- Summernote -->
+<script src="../../../plugins/summernote/summernote-bs4.min.js"></script>
+<script src="../../../plugins/chart.js/Chart.min.js"></script>
+
+<script>
+    $(function () {
+        $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+            event.preventDefault();
+            $(this).ekkoLightbox({
+                alwaysShowClose: true
+            });
+        });
+
+        $('.btn[data-filter]').on('click', function () {
+            $('.btn[data-filter]').removeClass('active');
+            $(this).addClass('active');
+        });
+    })
+</script>
+<script>
+    $(document).ready(function () {
+        $(".overlay").hide();
+        $('.select2').select2();
+
+        $("#summernote1").summernote({
+            toolbar: [
+                ['font', ['bold', 'underline']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['insert', ['picture']],
+            ],
+            placeholder: 'กรอกเนื้อหาในบทความ',
+        },);
+    })
+
+    $("#form_create_article").on('submit', function (e) {
+        e.preventDefault();
+        const face_book_name = document.getElementById("face_book_name");
+        const facebook_link = document.getElementById("facebook_link");
+        if (face_book_name.value != '' && facebook_link.value != '' || face_book_name.value == '' && facebook_link.value == '') {
+            action_();
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'กรุณากรอกชื่อ facebook และลิ้งค์ facebook',
+                confirmButtonText: 'ตกลง',
+                showConfirmButton: true
+            })
+        }
+    });
+
+    function action_() {
+        Swal.fire({
+            title: 'บันทึกข้อมูลสำเร็จ',
+            icon: "success",
+            showConfirmButton: false,
+            allowOutsideClick: true,
+        });
+        setTimeout(() => {
+            window.location.reload();
+        }, 2000);
+    }
+</script>
+<script>
+    function previewImage(input) {
+        var preview = document.getElementById('image-preview-');
+        var preview_extra = document.getElementById('image-preview-extra-');
+        var file = input.files[0];
+        var reader = new FileReader();
+        reader.onloadend = function () {
+            preview.src = reader.result;
+            preview_extra.href = reader.result;
+        }
+
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+    }
+</script>
+
+</html>
