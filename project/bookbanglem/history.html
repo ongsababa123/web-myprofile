@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+        name='viewport' />
+    <title>ประวัติการเช่า</title>
+    <!--     Fonts and icons     -->
+    <link href="../../assets/fontgoogle.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../dist/sweetalert/sweetalert2.min.css">
+    <!-- CSS Files -->
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../assets/css/paper-kit.css" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="../../assets/demo/demo.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+<style>
+    .center {
+        padding: 100px 0;
+        padding-left: 30px;
+        text-align: center;
+    }
+
+    .nav .nav-item .nav-link:hover,
+    .nav .nav-item .nav-link:focus {
+        background-color: #d7a744;
+        color: white;
+    }
+
+    .nav-pills .nav-item .nav-link.active {
+        background-color: #fbc658;
+        color: white;
+    }
+
+    .nav-pills .nav-item .nav-link {
+        background-color: #86d9ab;
+        border: #86d9ab;
+    }
+</style>
+
+<body class="landing-page sidebar-collapse">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-danger">
+        <div class="container">
+            <div class="navbar-translate">
+                <a class="navbar-brand" href="./home.html" rel="tooltip" title="Coded by Creative Tim"
+                    data-placement="bottom" style="font-size: medium; font-family: kanit;">
+                    ชื่อร้าน
+                </a>
+                <a class="navbar-brand" href="../../index.html" rel="tooltip" title="Coded by Creative Tim"
+                    data-placement="bottom" style="font-size: medium; font-family: kanit;">
+                    Portfolio
+                </a>
+                <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navigation" aria-controls="navigation-index" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-bar bar1"></span>
+                    <span class="navbar-toggler-bar bar2"></span>
+                    <span class="navbar-toggler-bar bar3"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown" id="dropdown">
+                        <a href="#" id="navbarDropdownMenu" data-toggle="dropdown" aria-haspopup="true"
+                            style="font-size: medium; font-family: kanit;" aria-expanded="false"
+                            class="nav-link">รายละเอียด</i></a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenu">
+                            <a class="dropdown-item" style="font-size: medium; font-family: kanit;">
+                                1 : ข้อจำกัดในการเช่าหนังสือ 7 เล่ม / ครั้ง
+                            </a>
+                            <a class="dropdown-item" style="font-size: medium; font-family: kanit;">
+                                2 : หากลูกค้าทำหนังสือหายปรับตามราคาหนังสือเป็น 5 เท่า
+                            </a>
+                            <a class="dropdown-item" style="font-size: medium; font-family: kanit;">
+                                3 : หากเลยกำหนดจะถูกปรับ 20 บาท / เล่ม / วัน
+                            </a>
+                            <a class="dropdown-item" style="font-size: medium; font-family: kanit;">
+                                4 : ค่ามัดจำเล่มละ 100 บาท
+                            </a>
+                            <a class="dropdown-item" style="font-size: medium; font-family: kanit;">
+                                5 : หากจองแล้วไม่เข้ามารับภายใน 2 วัน ที่ทำการจองจะต้องทำการจองใหม่เท่านั้น
+                            </a>
+                            <a class="dropdown-item" style="font-size: medium; font-family: kanit;">
+                                6 : ให้สิทธ์ในการเช่าเพียง 1ครั้ง สูงสุด 7 เล่ม หากยังไม่คืนจะไม่มารถยืมต่อได้
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./booklist.html" class="nav-link" style="font-size: medium; font-family: kanit;">
+                            รายการหนังสือ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./contact.html" class="nav-link" style="font-size: medium; font-family: kanit;">
+                            ติดต่อเรา</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./login.html" class="btn btn-warning btn-round"
+                            style="font-size: medium; font-family: kanit;">เข้าสู่ระบบ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false" class="btn btn-warning btn-round"><i
+                                class="fas fa-user-circle"></i></a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="./profile.html"
+                                style="font-size: medium; font-family: kanit;">ข้อมูลส่วนตัว <i
+                                    class="fas fa-id-card-alt"></i></a>
+                            <a class="dropdown-item" href="./cart.html"
+                                style="font-size: medium; font-family: kanit;">ตระกร้าสินค้า <i
+                                    class="fas fa-shopping-cart"></i></a>
+                            <a class="dropdown-item" href="./history.html"
+                                style="font-size: medium; font-family: kanit;">ประวัติเช่าหนังสือ <i
+                                    class="fas fa-history"></i></a>
+                            <a class="dropdown-item" href="./login.html"
+                                style="font-size: medium; font-family: kanit;">ออกจากระบบ <i
+                                    class="fas fa-sign-out-alt"></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <div class="main" style="background-color: #bddce5;">
+        <br>
+        <div class="page-header page-header-xs" data-parallax="true"
+            style="background-image: url('../../dist/img/background.png')">
+            <div class="filter"></div>
+            <div class="container">
+                <div class="motto text-center">
+                    <h1 style="font-family: kanit;">ประวัติการเช่า</h1>
+                    <br />
+                    <a href="./booklist.html" class="btn btn-outline-neutral btn-round" style="font-family: kanit;"><i
+                            class="fas fa-cart-plus"></i>
+                        จองหนังสือเพิ่ม</a>
+                </div>
+            </div>
+        </div>
+        <div class="section mb-6" style="background-color: #bddce5;">
+            <div class="container ">
+                <ul class="nav nav-pills nav-fill">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="tab1" data-toggle="pill" href="#tabContent1"
+                            style="font-family: kanit;">รอรับหนังสือ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="tab2" data-toggle="pill" href="#tabContent2"
+                            style="font-family: kanit;">กำลังเช่า</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="tab3" data-toggle="pill" href="#tabContent3"
+                            style="font-family: kanit;">คืนแล้ว</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="tabContent1">
+                        <!-- Tab 1 content -->
+                        <div class="bg-info pb-3 text-center">
+                            <div class="row mt-2">
+                                <div class="col-lg-12 mt-4">
+                                    <h6 class="text-white" style="font-family: kanit;">รอเข้ารับหนังสือ</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4 border mb-3" style="background-color: white;">
+                            <div class="row mt-2">
+                                <div class="col-lg-5 col-md-12 text-center">
+                                    <img src="../../dist/img/bookbanglem/book1.jpg" class="img-rounded img-responsive"
+                                        alt="Rounded Image" style="height: 300px;">
+                                </div>
+                                <div class="col-lg-6">
+                                    <h2 class="title" style="font-family: kanit;">
+                                        จิตวิทยาสายดาร์ก
+                                    </h2>
+                                    <h6 class="description" style="font-family: kanit;">ชื่อผู้แต่ง
+                                        Dr.Hiro
+                                    </h6>
+                                    <h6 class="description" style="font-family: kanit;">ประเภท
+                                        จิตวิทยา การพัฒนาตัวเอง
+                                    </h6>
+                                    <p class="description" style="font-family: kanit;">
+                                        Dr. Hiro เคยเป็นนักขายที่ล้มเหลว
+                                        ขายอะไรก็ไม่มีใครซื้อแต่แล้ววันหนึ่งขณะกำลังดูข่าว
+                                        เขาก็นึกขึ้นได้ว่า“ในโลกเรามีลัทธิที่ขายของไม่น่าเชื่อถือได้ในราคาแพงลิ่วแถมยังทำให้สาวกยอมทุ่มบริจาคทรัพย์สินจนหมดตัวแล้วทำไมผมถึงขายไม่ออกล่ะ?”เขาจึงเริ่มศึกษาเทคนิคเหล่านั้นอย่างจริงจังอ่านหนังสือทุกเล่มเกี่ยวกับการล้างสมองที่มีในท้องตลาดแล้วเอาไปปรับใช้จนกลายเป็นนักขายระดับท็อปของญี่ปุ่นนั่นคือที่มาของ
+                                        “จิตวิทยาสายดาร์ก”พบกับเทคนิคทางจิตวิทยาที่ช่วยให้คุณใช้คำพูดควบคุมจิตใจคนทำให้พวกเขาคล้อยตามและทำอย่างที่คุณต้องการโดยไม่รู้ตัว
+                                    </p>
+                                    <h6 class="description" style="font-family: kanit;">ราคาเช่า 100 บาท</h6>
+                                    <h6 class="description" style="font-family: kanit;">ราคาหนังสือ 100 บาท </h6>
+                                    <a href="./bookdetail.html" class="btn btn-default"
+                                        style="font-family: kanit;">เพิ่มเติม</a>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-lg-8 mt-2"></div>
+                                <div class="col-lg-2 mt-2">
+                                    <button class="btn btn-primary btn-round" data-toggle="modal" data-target="#details"
+                                        onclick="loadmodal(1)" id="button_modal" name="button_modal"
+                                        style="font-family: kanit;">รายละเอียด</button>
+                                </div>
+                                <div class="col-lg-2 mt-2">
+                                    <button type="button" class="btn btn-danger btn-round" name="cancelhis"
+                                        id="cancelhis" style="font-family: kanit;"
+                                        onclick="confirm_Alert('ต้องการยกเลิกการเช่าใช่หรือไม่')">
+                                        <i class="fas fa-store-slash"></i> ยกเลิกการเช่า
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tabContent2">
+                        <!-- Tab 2 content -->
+                        <div class="bg-warning pb-3 text-center">
+                            <div class="row mt-2">
+                                <div class="col-lg-12 mt-4">
+                                    <h6 class="text-white" style="font-family: kanit;">กำลังยืม</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4 border mb-3" style="background-color: white;">
+                            <div class="row mt-2">
+                                <div class="col-lg-5 col-md-12 text-center">
+                                    <img src="../../dist/img/bookbanglem/book1.jpg" class="img-rounded img-responsive"
+                                        alt="Rounded Image" style="height: 300px;">
+                                </div>
+                                <div class="col-lg-6">
+                                    <h2 class="title" style="font-family: kanit;">
+                                        จิตวิทยาสายดาร์ก
+                                    </h2>
+                                    <h6 class="description" style="font-family: kanit;">ชื่อผู้แต่ง
+                                        Dr.Hiro
+                                    </h6>
+                                    <h6 class="description" style="font-family: kanit;">ประเภท
+                                        จิตวิทยา การพัฒนาตัวเอง
+                                    </h6>
+                                    <p class="description" style="font-family: kanit;">
+                                        Dr. Hiro เคยเป็นนักขายที่ล้มเหลว
+                                        ขายอะไรก็ไม่มีใครซื้อแต่แล้ววันหนึ่งขณะกำลังดูข่าว
+                                        เขาก็นึกขึ้นได้ว่า“ในโลกเรามีลัทธิที่ขายของไม่น่าเชื่อถือได้ในราคาแพงลิ่วแถมยังทำให้สาวกยอมทุ่มบริจาคทรัพย์สินจนหมดตัวแล้วทำไมผมถึงขายไม่ออกล่ะ?”เขาจึงเริ่มศึกษาเทคนิคเหล่านั้นอย่างจริงจังอ่านหนังสือทุกเล่มเกี่ยวกับการล้างสมองที่มีในท้องตลาดแล้วเอาไปปรับใช้จนกลายเป็นนักขายระดับท็อปของญี่ปุ่นนั่นคือที่มาของ
+                                        “จิตวิทยาสายดาร์ก”พบกับเทคนิคทางจิตวิทยาที่ช่วยให้คุณใช้คำพูดควบคุมจิตใจคนทำให้พวกเขาคล้อยตามและทำอย่างที่คุณต้องการโดยไม่รู้ตัว
+                                    </p>
+                                    <h6 class="description" style="font-family: kanit;">ราคาเช่า 100 บาท</h6>
+                                    <h6 class="description" style="font-family: kanit;">ราคาหนังสือ 100 บาท </h6>
+                                    <a href="./bookdetail.html" class="btn btn-default"
+                                        style="font-family: kanit;">เพิ่มเติม</a>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-lg-8 mt-2"></div>
+                                <div class="col-lg-2 mt-2">
+                                    <button class="btn btn-primary btn-round" data-toggle="modal" data-target="#details"
+                                        onclick="loadmodal(1)" id="button_modal" name="button_modal"
+                                        style="font-family: kanit;">รายละเอียด</button>
+                                </div>
+                                <div class="col-lg-2 mt-2">
+                                    <button type="button" class="btn btn-danger btn-round" name="cancelhis"
+                                        id="cancelhis" style="font-family: kanit;"
+                                        onclick="confirm_Alert('ต้องการยกเลิกการเช่าใช่หรือไม่')">
+                                        <i class="fas fa-store-slash"></i> ยกเลิกการเช่า
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tabContent3">
+                        <!-- Tab 3 content -->
+                        <div class="bg-success pb-3 text-center">
+                            <div class="row mt-2">
+                                <div class="col-lg-5 mt-4">
+                                </div>
+                                <div class="col-lg-2 mt-4">
+                                    <h6 class="text-white" style="font-family: kanit;">คืนแล้ว</h6>
+                                </div>
+                                <div class="col-lg-3 mt-4">
+                                </div>
+                                <div class="col-lg-2 mt-4">
+                                    <button class="btn btn-primary btn-round" type="button" data-toggle="collapse"
+                                        data-target="#collapseTab3_" aria-expanded="false" aria-controls="collapseTab3"
+                                        style="font-family: kanit;">
+                                        เปิด/ปิด
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="collapseTab3_" class="collapse show">
+                            <div class="p-4 border mb-3" style="background-color: white;">
+                                <div class="row mt-2">
+                                    <div class="col-lg-5 col-md-12 text-center">
+                                        <img src="../../dist/img/bookbanglem/book1.jpg"
+                                            class="img-rounded img-responsive" alt="Rounded Image"
+                                            style="height: 300px;">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <h2 class="title" style="font-family: kanit;">
+                                            จิตวิทยาสายดาร์ก
+                                        </h2>
+                                        <h6 class="description" style="font-family: kanit;">ชื่อผู้แต่ง
+                                            Dr.Hiro
+                                        </h6>
+                                        <h6 class="description" style="font-family: kanit;">ประเภท
+                                            จิตวิทยา การพัฒนาตัวเอง
+                                        </h6>
+                                        <p class="description" style="font-family: kanit;">
+                                            Dr. Hiro เคยเป็นนักขายที่ล้มเหลว
+                                            ขายอะไรก็ไม่มีใครซื้อแต่แล้ววันหนึ่งขณะกำลังดูข่าว
+                                            เขาก็นึกขึ้นได้ว่า“ในโลกเรามีลัทธิที่ขายของไม่น่าเชื่อถือได้ในราคาแพงลิ่วแถมยังทำให้สาวกยอมทุ่มบริจาคทรัพย์สินจนหมดตัวแล้วทำไมผมถึงขายไม่ออกล่ะ?”เขาจึงเริ่มศึกษาเทคนิคเหล่านั้นอย่างจริงจังอ่านหนังสือทุกเล่มเกี่ยวกับการล้างสมองที่มีในท้องตลาดแล้วเอาไปปรับใช้จนกลายเป็นนักขายระดับท็อปของญี่ปุ่นนั่นคือที่มาของ
+                                            “จิตวิทยาสายดาร์ก”พบกับเทคนิคทางจิตวิทยาที่ช่วยให้คุณใช้คำพูดควบคุมจิตใจคนทำให้พวกเขาคล้อยตามและทำอย่างที่คุณต้องการโดยไม่รู้ตัว
+                                        </p>
+                                        <h6 class="description" style="font-family: kanit;">ราคาเช่า 100 บาท</h6>
+                                        <h6 class="description" style="font-family: kanit;">ราคาหนังสือ 100 บาท </h6>
+                                        <a href="./bookdetail.html" class="btn btn-default "
+                                            style="font-family: kanit;">เพิ่มเติม</a>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-lg-5 mt-2">
+                                    </div>
+                                    <div class="col-lg-2 mt-2">
+                                        <a class="btn btn-danger btn-round" id="print" name="print"
+                                            href="./admin_page/bill_view.html" target="_blank" style="font-family: kanit;"><i class="fas fa-print"></i>
+                                            พิมพ์ใบเสร็จ</a>
+                                    </div>
+                                    <div class="col-lg-3 mt-2">
+                                        <a class="btn btn-danger btn-round" id="print" name="print"
+                                            href="./admin_page/bill_view_return.html" target="_blank" style="font-family: kanit;"><i class="fas fa-print"></i>
+                                            พิมพ์ใบเสร็จคืนค่ามัดจำ</a>
+                                    </div>
+                                    <div class="col-lg-2 mt-2">
+                                        <button class="btn btn-primary btn-round" data-toggle="modal"
+                                            data-target="#details" onclick="loadmodal(1)" id="button_modal"
+                                            name="button_modal" style="font-family: kanit;">รายละเอียด</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade " id="details" tabindex="-1" role="dialog" aria-hidden="false">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header no-border-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h1 class="text-muted" style="font-family: kanit;">รายละเอียด</h1>
+                    <div class="social-line text-center">
+                        <img src="https://via.placeholder.com/300/FFFFFF.png?text=logo" width="10%">
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <table class="table" id="book_Table" style="font-family: kanit;">
+                            <tr>
+                                <th>ลำดับ:</th>
+                                <td style="font-family: kanit;">1</td>
+                                <th>ชื่อหนังสือ:</th>
+                                <td style="font-family: kanit;">จิตวิทยาสายดาร์ก</td>
+                                <th>ราคาหนังสือ:</th>
+                                <td style="font-family: kanit;">100 บาท</td>
+                                <th>ราคาเช่า:</th>
+                                <td style="font-family: kanit;">100 บาท</td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>ราคาหนังสือรวม:</th>
+                                <td style="font-family: kanit;">100 บาท</td>
+                                <th>ราคาเช่ารวม:</th>
+                                <td style="font-family: kanit;">100 บาท</td>
+                            </tr>
+                            <tr>
+                                <th>โปรโมชั่น:</th>
+                                <td style="font-family: kanit;">ไม่มีโปรโมชั่น</td>
+                                <th colspan="6"></th>
+                            </tr>
+                            <tr>
+                                <th colspan="3"></th>
+                                <th colspan="2">ส่วนลด:</th>
+                                <td style="font-family: kanit;">0 บาท</td>
+                                <th>ค่าปรับหนังสือ (รวม):</th>
+                                <td style="font-family: kanit;">0 บาท</td>
+                            </tr>
+                            <tr>
+                                <th>วันที่เข้ารับหนังสือ:</th>
+                                <td style="font-family: kanit;" colspan="2">2024-02-07 </td>
+                                <th colspan="2">ค่ามัดจํา:</th>
+                                <td style="font-family: kanit;">50 บาท</td>
+                                <th>ค่าปรับเกินกำหนด:</th>
+                                <td style="font-family: kanit;">0 บาท</td>
+                            </tr>
+                            <tr>
+                                <th>วันที่จะต้องคืนหนังสือ:</th>
+                                <td style="font-family: kanit;" colspan="2">2024-02-07 </td>
+                                <th colspan="2"> ราคารวม (ค่ามัดจําและหักโปรโมชั่น):</th>
+                                <td style="font-family: kanit;">150 บาท</td>
+                                <th>ค่าปรับอื่นๆ:</th>
+                                <td style="font-family: kanit;">0 บาท</td>
+                            </tr>
+                            <tr>
+                                <th>วันที่มาคืนหนังสือ:</th>
+                                <td style="font-family: kanit;" colspan="2">ยังไม่มาคืน </td>
+                                <th colspan="3"></th>
+                                <th>ค่าปรับรวม:</th>
+                                <td style="font-family: kanit;">0 บาท</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer bg-danger">
+        <div class="container">
+            <div class="row">
+                <nav class="footer-nav">
+                    <ul>
+                        <li>
+                            <a href="./home.html" style="color: white; font-family: kanit;">ชื่อร้าน</a>
+                        </li>
+                        <li>
+                            <a href="./booklist.html" style="color: white; font-family: kanit;">รายการหนังสือ</a>
+                        </li>
+                        <li>
+                            <a href="./contact.html" style="color: white; font-family: kanit;">ติดต่อเรา</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="credits ml-auto">
+                    <span class="copyright" style="color: white; font-family: kanit;">
+                        ©
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script>, made with <i class="fas fa-heart heart"></i> by Banglem
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--   Core JS Files   -->
+    <script src="../../assets/js/core/jquery.min.js" type="text/javascript"></script>
+    <script src="../../assets/js/core/popper.min.js" type="text/javascript"></script>
+    <script src="../../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+    <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+    <script src="../../assets/js/plugins/bootstrap-switch.js"></script>
+    <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+    <script src="../../assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+    <!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
+    <script src="../../assets/js/plugins/moment.min.js"></script>
+    <script src="../../assets/js/plugins/bootstrap-datepicker.js" type="text/javascript"></script>
+    <!-- Control Center for Paper Kit: parallax effects, scripts for the example pages, etc -->
+    <script src="../../assets/js/paper-kit.js?v=2.2.0" type="text/javascript"></script>
+    <script src="../../dist/sweetalert/sweetalert2.js"></script>
+
+    <script>
+        function action_(url, form) {
+            Swal.fire({
+                title: "ยืนยันการจองสำเร็จ",
+                icon: 'success',
+                showConfirmButton: false,
+                allowOutsideClick: false
+            });
+            setTimeout(() => {
+                window.location.reload();
+            }, 2000);
+        }
+    </script>
+    <script>
+        function loadmodal(id_history, type) {
+        }
+    </script>
+    <script>
+        function confirm_Alert(text, url) {
+            Swal.fire({
+                title: text,
+                icon: 'question',
+                showCancelButton: true,
+                cancelButtonText: "ยกเลิก",
+                confirmButtonColor: "#28a745",
+                confirmButtonText: "ตกลง",
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url: '<?= base_url() ?>' + url,
+                        headers: {
+                            'X-Requested-With': 'XMLHttpRequest'
+                        },
+                        beforeSend: function () {
+                            // Show loading indicator here
+                            var loadingIndicator = Swal.fire({
+                                title: 'กําลังดําเนินการ...',
+                                allowEscapeKey: false,
+                                allowOutsideClick: false,
+                                showConfirmButton: false,
+                            });
+                        },
+                    }).done(function (response) {
+                        Swal.close();
+                        if (response.success) {
+                            Swal.fire({
+                                title: response.message,
+                                icon: 'success',
+                                showConfirmButton: false
+                            });
+                            setTimeout(() => {
+                                if (response.reload) {
+                                    window.location.reload();
+                                }
+                            }, 2000);
+                        } else {
+                            Swal.fire({
+                                title: response.message,
+                                icon: 'error',
+                                confirmButtonText: "ตกลง",
+                                showConfirmButton: true
+                            });
+                        }
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

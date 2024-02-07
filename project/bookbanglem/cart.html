@@ -157,9 +157,10 @@
             <div class="filter"></div>
             <div class="container">
                 <div class="motto text-center">
-                    <h1>ตระกร้าของฉัน</h1>
+                    <h1 style="font-family: kanit;">ตระกร้าของฉัน</h1>
                     <br />
-                    <a href="./booklist.html" class="btn btn-outline-neutral btn-round"><i class="fas fa-cart-plus"></i>
+                    <a href="./booklist.html" class="btn btn-outline-neutral btn-round" style="font-family: kanit;"><i
+                            class="fas fa-cart-plus"></i>
                         จองหนังสือเพิ่ม</a>
                 </div>
             </div>
@@ -185,17 +186,17 @@
                         <div class="col-lg-11">
                             <div class="row">
                                 <div class="col-sm-7">
-                                    <h6 class="description">ชื่อหนังสือ</h6>
-                                    <p class="description">
+                                    <h6 class="description" style="font-family: kanit;">ชื่อหนังสือ</h6>
+                                    <p class="description" style="font-family: kanit;">
                                         จิตวิทยาสายดาร์ก
                                     </p>
                                 </div>
                                 <div class="col-sm-3">
-                                    <h6 ราคา class="description">ราคาเช่า</h6>
+                                    <h6 ราคา class="description" style="font-family: kanit;">ราคาเช่า</h6>
                                     100 บาท
                                 </div>
                                 <div class="col-sm-2">
-                                    <h6 ราคา class="description">วันที่กดเข้าตระกร้า</h6>
+                                    <h6 ราคา class="description" style="font-family: kanit;">วันที่กดเข้าตระกร้า</h6>
                                     22/04/2021
                                 </div>
                             </div>
@@ -221,17 +222,17 @@
                         <div class="col-lg-11">
                             <div class="row">
                                 <div class="col-sm-7">
-                                    <h6 class="description">ชื่อหนังสือ</h6>
-                                    <p class="description">
+                                    <h6 class="description" style="font-family: kanit;">ชื่อหนังสือ</h6>
+                                    <p class="description" style="font-family: kanit;">
                                         จิตวิทยาสายดาร์ก
                                     </p>
                                 </div>
                                 <div class="col-sm-3">
-                                    <h6 ราคา class="description">ราคาเช่า</h6>
+                                    <h6 ราคา class="description" style="font-family: kanit;">ราคาเช่า</h6>
                                     100 บาท
                                 </div>
                                 <div class="col-sm-2">
-                                    <h6 ราคา class="description">วันที่กดเข้าตระกร้า</h6>
+                                    <h6 ราคา class="description" style="font-family: kanit;">วันที่กดเข้าตระกร้า</h6>
                                     22/04/2021
                                 </div>
                             </div>
@@ -241,7 +242,7 @@
                 <div class="p-4 border mb-3" style="background-color: white;">
                     <div class="row">
                         <div class="col-lg-4 mt-2">
-                            <h6>จำนวน : </h6>
+                            <h6 style="font-family: kanit;">จำนวน : </h6>
                             <p id="quantity"></p>
                         </div>
                         <div class="col-lg-4 mt-2">
@@ -249,11 +250,12 @@
                         </div>
                         <div class="col-lg-2">
                             <button class="btn btn-primary btn-round" data-toggle="modal" data-target="#Payment"
-                                onclick="loadmodal()" id="button_modal" name="button_modal">ดำเนินการจอง</button>
+                                onclick="loadmodal()" id="button_modal" name="button_modal"
+                                style="font-family: kanit;">ดำเนินการจอง</button>
                         </div>
                         <div class="col-lg-2">
                             <button class="btn btn-danger btn-round" onclick="confirm_Alert()" id="button_cancel"
-                                name="button_cancel">ยกเลิก</button>
+                                name="button_cancel" style="font-family: kanit;">ยกเลิก</button>
                         </div>
                     </div>
                 </div>
@@ -267,12 +269,12 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    <h1 class="text-muted">ยืนยันการจอง</h1>
+                    <h1 class="text-muted" style="font-family: kanit;">ยืนยันการจอง</h1>
                     <div class="social-line text-center">
-                        <img src="../../dist/img/logo11.png" width="50%">
+                        <img src="https://via.placeholder.com/300/FFFFFF.png?text=logo" width="10%">
                     </div>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" style="font-family: kanit;">
                     <form class="mb-3" id="form_create_history_cart" action="javascript:void(0)" method="post"
                         enctype="multipart/form-data">
                         <div class="form-group">
@@ -318,16 +320,7 @@
                                 </div>
                             </div>
                         </div>
-                        <input type="text" id="sumid_promotion" name="sumid_promotion" hidden>
-                        <input type="text" id="name_book_create__" name="name_book_create__" hidden>
-                        <input type="text" id="name_user_create" name="name_user_create" hidden>
-                        <input type="text" id="cart_id" name="cart_id" hidden>
-                        <input type="text" id="price_book_create" name="price_book_create" hidden>
-                        <input type="text" id="price_deposit_" name="price_deposit_" hidden>
-                        <input type="text" id="sum_price_promotion" name="sum_price_promotion" hidden>
-                        <input type="text" id="id_stock_book" name="id_stock_book" hidden>
-                        <input type="text" id="url_route" name="url_route" hidden>
-                        <button class="btn btn-block btn-round"> จอง</button>
+                        <button class="btn btn-block btn-round" style="font-family: kanit;"> จอง</button>
                     </form>
                 </div>
             </div>
@@ -376,7 +369,6 @@
     <script src="../../dist/sweetalert/sweetalert2.js"></script>
 
     <script>
-
         $("#form_create_history_cart").on('submit', function (e) {
             e.preventDefault();
             action_();
@@ -513,6 +505,19 @@
             $("#sum_price_promotion").html('0 บาท');
             $("#sum_price_deposit").html('100 บาท');
             $("#sum_price").html('100 บาท');
+        }
+    </script>
+    <script>
+        function action_(url, form) {
+            Swal.fire({
+                title: "ยืนยันการจองสำเร็จ",
+                icon: 'success',
+                showConfirmButton: false,
+                allowOutsideClick: false
+            });
+            setTimeout(() => {
+                window.location.reload();
+            }, 2000);
         }
     </script>
 </body>

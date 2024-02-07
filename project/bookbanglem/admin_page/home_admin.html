@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <title>หน้าแรก</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Google Font: Source Sans Pro -->
@@ -17,7 +18,6 @@
     <link rel="stylesheet" href="../../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="../../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" href="../../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
-    <link rel="icon" href="../../../dist/img/icon/favicon.ico" type="image/gif">
 </head>
 <style>
     /* เพิ่ม CSS ในส่วนนี้เพื่อกำหนดฟอนต์ให้กับทุกส่วนของหน้าเว็บไซต์ */
@@ -68,13 +68,12 @@
                             <img class="img-circle" src="../../../dist/img/avatar6.png" alt="User Image">
                             <span class="username">
                                 Jirayut Bandit
-                            </span>                                
+                            </span>
                             <span class="description">เจ้าของร้าน</span>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="userDropdown">
                             <!-- Dropdown items go here -->
-                            <a class="dropdown-item" href="dashboard/profile/index"> <i
-                                    class="fas fa-id-card"></i>
+                            <a class="dropdown-item" href="dashboard/profile/index"> <i class="fas fa-id-card"></i>
                                 ข้อมูลส่วนตัว
                             </a>
                             <div class="dropdown-divider"></div>
@@ -96,7 +95,7 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="/dashboard/index" class="brand-link">
+            <a href="./home_admin.html" class="brand-link">
                 <span class="brand-text ml-1">ระบบการจัดการ ร้านบางเล่ม</span>
             </a>
             <!-- Sidebar -->
@@ -107,7 +106,7 @@
                         data-accordion="false">
                         <li class="nav-header">Home</li>
                         <li class="nav-item">
-                            <a href="/dashboard/index" class="nav-link">
+                            <a href="./home_admin.html" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
                                 <p>
                                     หน้าหลัก
@@ -118,122 +117,122 @@
                             <hr>
                         </div>
                         <li class="nav-header">ระบบการจัดการสมาชิก</li>
-                            <li class="nav-item">
-                                <a href="/dashboard/customer/index" class="nav-link">
-                                    <i class="nav-icon fas fa-user-cog"></i>
-                                    <p>
-                                        ข้อมูลสมาชิก
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="/dashboard/employee/index" class="nav-link">
-                                    <i class="nav-icon fas fa-user-tie"></i>
-                                    <p>
-                                        ข้อมูลพนักงาน
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="/dashboard/owner/index" class="nav-link">
-                                    <i class="nav-icon fas fa-user-secret"></i>
-                                    <p>
-                                        ข้อมูลเจ้าของร้าน
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="/dashboard/admin/index" class="nav-link">
-                                    <i class="nav-icon fas fa-user-shield"></i>
-                                    <p>
-                                        ข้อมูลผู้ดูแลระบบ
-                                    </p>
-                                </a>
-                            </li>
+                        <li class="nav-item">
+                            <a href="/dashboard/customer/index" class="nav-link">
+                                <i class="nav-icon fas fa-user-cog"></i>
+                                <p>
+                                    ข้อมูลสมาชิก
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/dashboard/employee/index" class="nav-link">
+                                <i class="nav-icon fas fa-user-tie"></i>
+                                <p>
+                                    ข้อมูลพนักงาน
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/dashboard/owner/index" class="nav-link">
+                                <i class="nav-icon fas fa-user-secret"></i>
+                                <p>
+                                    ข้อมูลเจ้าของร้าน
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/dashboard/admin/index" class="nav-link">
+                                <i class="nav-icon fas fa-user-shield"></i>
+                                <p>
+                                    ข้อมูลผู้ดูแลระบบ
+                                </p>
+                            </a>
+                        </li>
                         <div>
                             <hr>
                         </div>
-                            <li class="nav-header">ระบบการจัดการหนังสือ</li>
-                            <li class="nav-item">
-                                <a href="/dashboard/book/index" class="nav-link">
-                                    <i class="nav-icon fas fa-book"></i>
-                                    <p>
-                                        ข้อมูลหนังสือ
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="/dashboard/history/index" class="nav-link">
-                                    <i class="nav-icon fas fa-history"></i>
-                                    <p>
-                                        ข้อมูลการเช่า-คืน หนังสือ
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="/dashboard/category/index" class="nav-link">
-                                    <i class="nav-icon fas fa-bookmark"></i>
-                                    <p>
-                                        หมวดหมู่หนังสือ
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="/dashboard/book/stock_all/index" class="nav-link">
-                                    <i class="nav-icon fas fa-cubes"></i>
-                                    <p>
-                                        คลังหนังสือทั้งหมด
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="/dashboard/book/book_stock_all/index" class="nav-link">
-                                    <i class="nav-icon fas fa-clipboard-list"></i>
-                                    <p>
-                                        ภาพรวมคลังหนังสือ
-                                    </p>
-                                </a>
-                            </li>
-                            <div>
-                                <hr>
-                            </div>
-                            <li class="nav-header">ระบบการจัดการระบบ</li>
-                            <li class="nav-item">
-                                <a href="/dashboard/setting/index" class="nav-link">
-                                    <i class="nav-icon fas fa-cogs"></i>
-                                    <p>
-                                        การตั้งค่าระบบ
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="/dashboard/promotion/index" class="nav-link">
-                                    <i class="nav-icon fas fa-ad"></i>
-                                    <p>
-                                        ข้อมูลโปรโมชั่น
-                                    </p>
-                                </a>
-                            </li>
+                        <li class="nav-header">ระบบการจัดการหนังสือ</li>
+                        <li class="nav-item">
+                            <a href="/dashboard/book/index" class="nav-link">
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>
+                                    ข้อมูลหนังสือ
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/dashboard/history/index" class="nav-link">
+                                <i class="nav-icon fas fa-history"></i>
+                                <p>
+                                    ข้อมูลการเช่า-คืน หนังสือ
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/dashboard/category/index" class="nav-link">
+                                <i class="nav-icon fas fa-bookmark"></i>
+                                <p>
+                                    หมวดหมู่หนังสือ
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/dashboard/book/stock_all/index" class="nav-link">
+                                <i class="nav-icon fas fa-cubes"></i>
+                                <p>
+                                    คลังหนังสือทั้งหมด
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/dashboard/book/book_stock_all/index" class="nav-link">
+                                <i class="nav-icon fas fa-clipboard-list"></i>
+                                <p>
+                                    ภาพรวมคลังหนังสือ
+                                </p>
+                            </a>
+                        </li>
+                        <div>
+                            <hr>
+                        </div>
+                        <li class="nav-header">ระบบการจัดการระบบ</li>
+                        <li class="nav-item">
+                            <a href="/dashboard/setting/index" class="nav-link">
+                                <i class="nav-icon fas fa-cogs"></i>
+                                <p>
+                                    การตั้งค่าระบบ
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/dashboard/promotion/index" class="nav-link">
+                                <i class="nav-icon fas fa-ad"></i>
+                                <p>
+                                    ข้อมูลโปรโมชั่น
+                                </p>
+                            </a>
+                        </li>
 
-                                <li class="nav-item">
-                                    <a href="/dashboard/report/index" class="nav-link">
-                                        <i class="nav-icon fas fa-chart-line"></i>
-                                        <p>
-                                            รายงานยอดเช่า
-                                        </p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="/dashboard/activity/index" class="nav-link">
-                                        <i class="nav-icon fas fa-people-arrows"></i>
-                                        <p>
-                                            รายงานเข้า-ออก
-                                        </p>
-                                    </a>
-                                </li>
-                            <div>
-                                <hr>
-                            </div>
+                        <li class="nav-item">
+                            <a href="/dashboard/report/index" class="nav-link">
+                                <i class="nav-icon fas fa-chart-line"></i>
+                                <p>
+                                    รายงานยอดเช่า
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/dashboard/activity/index" class="nav-link">
+                                <i class="nav-icon fas fa-people-arrows"></i>
+                                <p>
+                                    รายงานเข้า-ออก
+                                </p>
+                            </a>
+                        </li>
+                        <div>
+                            <hr>
+                        </div>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -242,7 +241,132 @@
         </aside>
         <!-- /.control-sidebar -->
     </div>
-    <!-- ./wrapper -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1>หน้าหลัก
+                        </h1>
+                    </div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item active"><a>หน้าหลัก</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-sm-12">
+                        <div class="card card-navy card-tabs">
+                            <div class="card-header">
+                                <h3>หนังสือเด่นประจำสัปดาห์ <i class="fas fa-star" style="color: #d3cd22;"></i></h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card card-profile card-plain text-center">
+                                            <div class="">
+                                                <img src="../../../dist/img/bookbanglem/book1.jpg" class="img-fluid"
+                                                    alt="white sample" style="height: 30rem;" />
+                                            </div>
+                                            <div class="card-body">
+                                                <a>
+                                                    <div class="text-center">
+                                                        <h4 class="">
+                                                            จิตวิทยาสายดาร์ก
+                                                        </h4>
+                                                        <h6 class="">
+                                                            Dr.Hiro
+                                                        </h6>
+                                                    </div>
+                                                </a>
+                                                <p class="card-description text-center">
+                                                    Dr. Hiro เคยเป็นนักขายที่ล้มเหลว
+                                                    ขายอะไรก็ไม่มีใครซื้อแต่แล้ววันหนึ่งขณะกำลังดูข่าว
+                                                    เขาก็นึกขึ้นได้ว่า“ในโลกเรามีลัทธิที่ขายของไม่น่าเชื่อถือได้ในราคาแพงลิ่วแถมยังทำให้สาวกยอมทุ่มบริจาคทรัพย์สินจนหมดตัวแล้วทำไมผมถึงขายไม่ออกล่ะ?”เขาจึงเริ่มศึกษาเทคนิคเหล่านั้นอย่างจริงจังอ่านหนังสือทุกเล่มเกี่ยวกับการล้างสมองที่มีในท้องตลาดแล้วเอาไปปรับใช้จนกลายเป็นนักขายระดับท็อปของญี่ปุ่นนั่นคือที่มาของ
+                                                    “จิตวิทยาสายดาร์ก”พบกับเทคนิคทางจิตวิทยาที่ช่วยให้คุณใช้คำพูดควบคุมจิตใจคนทำให้พวกเขาคล้อยตามและทำอย่างที่คุณต้องการโดยไม่รู้ตัว
+                                                </p>
+                                            </div>
+                                            <div class="card-footer text-center">
+                                                <a href="../bookdetail.html"
+                                                    class="btn btn-info btn-round">เพิ่มเติม</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card card-profile card-plain text-center">
+                                            <div class="">
+                                                <img src="../../../dist/img/bookbanglem/book1.jpg" class="img-fluid"
+                                                    alt="white sample" style="height: 30rem;" />
+                                            </div>
+                                            <div class="card-body">
+                                                <a>
+                                                    <div class="text-center">
+                                                        <h4 class="">
+                                                            จิตวิทยาสายดาร์ก
+                                                        </h4>
+                                                        <h6 class="">
+                                                            Dr.Hiro
+                                                        </h6>
+                                                    </div>
+                                                </a>
+                                                <p class="card-description text-center">
+                                                    Dr. Hiro เคยเป็นนักขายที่ล้มเหลว
+                                                    ขายอะไรก็ไม่มีใครซื้อแต่แล้ววันหนึ่งขณะกำลังดูข่าว
+                                                    เขาก็นึกขึ้นได้ว่า“ในโลกเรามีลัทธิที่ขายของไม่น่าเชื่อถือได้ในราคาแพงลิ่วแถมยังทำให้สาวกยอมทุ่มบริจาคทรัพย์สินจนหมดตัวแล้วทำไมผมถึงขายไม่ออกล่ะ?”เขาจึงเริ่มศึกษาเทคนิคเหล่านั้นอย่างจริงจังอ่านหนังสือทุกเล่มเกี่ยวกับการล้างสมองที่มีในท้องตลาดแล้วเอาไปปรับใช้จนกลายเป็นนักขายระดับท็อปของญี่ปุ่นนั่นคือที่มาของ
+                                                    “จิตวิทยาสายดาร์ก”พบกับเทคนิคทางจิตวิทยาที่ช่วยให้คุณใช้คำพูดควบคุมจิตใจคนทำให้พวกเขาคล้อยตามและทำอย่างที่คุณต้องการโดยไม่รู้ตัว
+                                                </p>
+                                            </div>
+                                            <div class="card-footer text-center">
+                                                <a href="../bookdetail.html"
+                                                    class="btn btn-info btn-round">เพิ่มเติม</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card card-profile card-plain text-center">
+                                            <div class="">
+                                                <img src="../../../dist/img/bookbanglem/book1.jpg" class="img-fluid"
+                                                    alt="white sample" style="height: 30rem;" />
+                                            </div>
+                                            <div class="card-body">
+                                                <a>
+                                                    <div class="text-center">
+                                                        <h4 class="">
+                                                            จิตวิทยาสายดาร์ก
+                                                        </h4>
+                                                        <h6 class="">
+                                                            Dr.Hiro
+                                                        </h6>
+                                                    </div>
+                                                </a>
+                                                <p class="card-description text-center">
+                                                    Dr. Hiro เคยเป็นนักขายที่ล้มเหลว
+                                                    ขายอะไรก็ไม่มีใครซื้อแต่แล้ววันหนึ่งขณะกำลังดูข่าว
+                                                    เขาก็นึกขึ้นได้ว่า“ในโลกเรามีลัทธิที่ขายของไม่น่าเชื่อถือได้ในราคาแพงลิ่วแถมยังทำให้สาวกยอมทุ่มบริจาคทรัพย์สินจนหมดตัวแล้วทำไมผมถึงขายไม่ออกล่ะ?”เขาจึงเริ่มศึกษาเทคนิคเหล่านั้นอย่างจริงจังอ่านหนังสือทุกเล่มเกี่ยวกับการล้างสมองที่มีในท้องตลาดแล้วเอาไปปรับใช้จนกลายเป็นนักขายระดับท็อปของญี่ปุ่นนั่นคือที่มาของ
+                                                    “จิตวิทยาสายดาร์ก”พบกับเทคนิคทางจิตวิทยาที่ช่วยให้คุณใช้คำพูดควบคุมจิตใจคนทำให้พวกเขาคล้อยตามและทำอย่างที่คุณต้องการโดยไม่รู้ตัว
+                                                </p>
+                                            </div>
+                                            <div class="card-footer text-center">
+                                                <a href="../bookdetail.html"
+                                                    class="btn btn-info btn-round">เพิ่มเติม</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <!-- jQuery -->
     <script src="../../../plugins/jquery/jquery.min.js"></script>
